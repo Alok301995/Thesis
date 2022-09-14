@@ -18,7 +18,7 @@ class Db(object):
         self.username = config.db_username
         self.password = config.db_password
         self.database = config.db_database
-        self.port = config.db_port
+        # self.port = config.db_port
 
     def close(self):
         try:
@@ -36,7 +36,7 @@ class Db(object):
             user=self.username,
             passwd=self.password,
             db=self.database,
-            port=self.port,
+            # port=self.port,
             charset='utf8')
 
     def create_database_info_table_if_not_exists(self):
