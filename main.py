@@ -515,7 +515,8 @@ def dnt():
     return send_from_directory(app.static_folder, request.path[1:])
 
 if __name__ == "__main__":
-    if config.public:
-        app.run(host='0.0.0.0')
-    else:
-        app.run()
+    app.run(host='0.0.0.0' , debug=False)
+    # if config.public:
+    #     app.run(host='0.0.0.0')
+    # else:
+    #     app.run()
